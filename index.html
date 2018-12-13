@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <!--
+    Вот и секрет
+    Правда я его не придумал)))))))))))))))))))))))))))))))))
+    -->
+
+	<head>
+		<meta charset="UTF-8"/>
+		<title>A|G|A Wiki</title>
+		<link href="style.css" rel="stylesheet" type="text/css" />
+        
+        <style>
+        html,body {overflow:hidden}
+        </style>
+        <script>
+        document.onmousewheel = document.onwheel = function() {
+        return false;
+        };
+
+        document.addEventListener ("MozMousePixelScroll",
+        function() { return false }, false);
+
+        document.onkeydown = function(e) {
+        if (e.keyCode >= 33 && e.keyCode <= 40) return false;
+        }
+        </script>
+        
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript">
+
+          $(document).ready(function(){
+           $('a[href*=#]').bind("click", function(e){
+              var anchor = $(this);
+              $('html, body').stop().animate({
+                 scrollTop: $(anchor.attr('href')).offset().top
+              }, 1000);
+              e.preventDefault();
+           });
+           return false;
+        });
+        </script>
+	</head>
+    
+    <body>
+        <div id="idHead" class="index_head" style>
+            <center>
+                <img src="images/indexhead.jpg" usemap="imgmap2018121216928">
+                    <map id="imgmap2018121216928" name="imgmap2018121216928">
+                        <area shape="poly" alt="Adil" title="" coords="940,47,704,89,636,177,610,293,950,271" href="#idAdil" target="_self" />
+                        <area shape="rect" alt="Gaziz" title="" coords="296,290,1288,544" href="#idGaziz" target="_self" />
+                        <area shape="rect" alt="Arman" title="" coords="596,588,1006,738" href="#idArman" target="_self" />
+                    </map>
+            </center>
+        </div>
+        
+        <div class="index_body">
+            
+            <div id="idAdil" class="index_photos_div">
+                <img class="index_photos" src="images/indexadil.jpg" usemap="imgmap20181213175944">
+                <map id="imgmap20181213175944" name="imgmap20181213175944">
+                    <area shape="rect" alt="" title="" coords="20,900,76,946" href="#idHead" target="_self" />
+                    <area shape="rect" alt="" title="" coords="1060,346,1144,372" href="https://www.instagram.com/ecssuny/" target="_blank" />
+                    <area shape="poly" alt="" title="" coords="84,320,794,320,764,276,786,242,824,238,832,182,640,180,692,34,574,46,484,142,396,176,82,178,46,200,30,242,42,290,62,308" 
+                          href="adil.html" target="_self" />
+                </map>
+            </div>
+            
+            <div id="idGaziz" class="index_photos_div">
+                <img class="index_photos" src="images/indexgaziz.jpg">
+            </div>
+            
+            <div id="idArman" class="index_photos_div">
+                <img class="index_photos" src="images/indexarman.jpg">
+            </div>
+            
+        </div>
+        
+	</body>
+
+
+</html>
